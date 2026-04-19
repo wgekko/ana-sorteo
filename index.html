@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Ana-Quini6-Brinco</title>
+    <link rel="icon" href="img/lottery.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Lotería Santa Fe: Verificador Pro</h1>
+    <div class="card">
+        <h2>Mis Cartones</h2>
+        <div class="info-box">
+            <b>Instrucciones:</b> Ingresa 6 números separados por guiones o espacios (ej: 05 09 14...).<br>
+            • Brinco: 00 al 39 | • Quini 6: 00 al 45
+        </div>
+        <div class="coupon-manager">
+            <div class="input-group">
+                <h3>Cartón Brinco</h3>
+                <input type="text" id="inputBrinco" placeholder="Ej: 04-05-06-13-31-38" value="04-05-06-13-31-38">
+                <div id="errBrinco" class="error-msg">Error: deben ser 6 números únicos entre 00 y 39.</div>
+            </div>
+            <div class="input-group">
+                <h3>Cartón Quini 6</h3>
+                <input type="text" id="inputQuini" placeholder="Ej: 09-12-17-24-36-41" value="09-12-17-24-36-41">
+                <div id="errQuini" class="error-msg">Error: deben ser 6 números únicos entre 00 y 45.</div>
+            </div>
+        </div>
+        <button class="btn btn-success" onclick="procesarTodo()">Extraer Resultados y Comparar</button>
+    </div>
+    <div id="resultsArea" style="display:none;">
+        <div class="card">
+            <h2>Resultados Quini 6</h2>
+            <div id="resQuini"></div>
+        </div>
+        <div class="card">
+            <h2>Resultados Brinco</h2>
+            <div id="resBrinco"></div>
+        </div>
+    </div>
+</div>
+ <script src="static/scripts.js"></script>
+
+</body>
+</html>
